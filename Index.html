@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <title>Youtube mini</title>
+</head>
+
+<body>
+    <div id="header" class="container">
+        <div id="logo">
+            <a href="#1"><img src="images/logo.PNG" alt=""></a>
+        </div>
+        <div id="search">
+            <form action="">
+                <input type="search" placeholder="Search">
+            </form>
+        </div>
+        <hr>
+    </div>
+
+    <div class="row" id="content">
+        <div class="column left">
+            <iframe width="100%" height="700px" src="https://www.youtube.com/embed/xTqueeax74E?autoplay=1">
+                    </iframe>
+
+            <h2>Bản tin cảm bóng đá ngày 21/5 | Ronaldo đề cử Mourinho; Antonio Conte tái xuất</h2>
+            <p style="color: dimgray; font-style: italic; font-size:large">123.456.789 lượt xem</p>
+            <p>Nội dung video</p>
+            <br>
+            <hr>
+            <p style="font-size: larger">Nhận xét của bạn:</p>
+            <p id="hienthi">...</p><br>
+
+            <textarea id="myTextarea"></textarea>
+            <button type="button" onclick="myFunction()" id="btnGui">Gửi</button>
+        </div>
+        <div class="column right">
+            <ul style="list-style-type: none">
+                <a href="#4">
+                    <li><img src="images/01b.jpg" alt="">Tiêu đề video đề xuất 1</li>
+                </a>
+                <hr>
+                <a href="#4">
+                    <li><img src="images/02.jpg" alt="">Tiêu đề video đề xuất 2</li>
+                </a>
+                <hr>
+                <a href="#4">
+                    <li><img src="images/03.jpg" alt="">Tiêu đề video đề xuất 3</li>
+                </a>
+                <hr>
+                <a href="#4">
+                    <li><img src="images/04.jpg" alt="">Tiêu đề video đề xuất 4</li>
+                </a>
+                <hr>
+                <a href="#4">
+                    <li><img src="images/05.jpg" alt="">Tiêu đề video đề xuất 5</li>
+                </a>
+                <hr>
+                <a href="#4">
+                    <li><img src="images/05.jpg" alt="">Tiêu đề video đề xuất 6</li>
+                </a>
+                <hr>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- javascript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var url_string = window.location
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+                vars[key] = value;
+            });
+            console.log(vars)
+            return vars;
+
+        });
+
+        function myFunction() {
+            var value = document.getElementById("myTextarea").value;
+            var element = document.getElementById("hienthi");
+            element.innerHTML = element.innerHTML + '<div>' + value + '</div>';
+        }
+    </script>
+</body>
+
+</html>

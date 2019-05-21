@@ -1,0 +1,107 @@
+body {
+    margin: auto;
+    width: 100%;
+    padding-left: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Create two unequal columns that floats next to each other */
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+}
+
+.left {
+    width: 75%;
+}
+
+.right {
+    width: 25%;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    width: 100%;
+}
+
+#content {
+    padding: 0 5%;
+}
+
+input[type=search] {
+    width: 30%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 12px;
+    margin-left: 30%;
+    background-image: url(images/icon01.PNG);
+    background-repeat: no-repeat;
+    background-position: 95%
+}
+
+#logo {
+    width: 10%;
+    float: left;
+    background-color: #ffffff;
+    height: 60px;
+    padding-top: 10px;
+    padding-left: 20px
+}
+
+#search {
+    width: 90%;
+    float: right;
+    background-color: #ffffff;
+    height: 60px;
+    padding-top: 10px
+}
+
+li {
+    font-size: large;
+    color: brown;
+    padding-bottom: 10px;
+    font-weight: bold;
+    padding-top: 5px
+}
+
+a {
+    text-decoration: none
+}
+
+#hienthi {
+    font-size: 20px;
+    color: darkslateblue
+}
+
+#myTextarea {
+    width: 80%;
+    height: 60px;
+}
+
+#btnGui {
+    width: 10%;
+    height: 30px;
+    float: right;
+    margin-right: 9%;
+    margin-top: 15px;
+}
